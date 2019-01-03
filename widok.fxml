@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="505.0" prefWidth="879.0" style="-fx-border-width: 2px; -fx-border-color: #71bca0; -fx-background-color: #71bca0;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <top>
+      <MenuBar style="-fx-background-color: #71bca0;" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#modWind" text="Zmień bazę danych" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <right>
+      <VBox prefHeight="476.0" prefWidth="152.0" style="-fx-background-color: #71bca0;" BorderPane.alignment="CENTER">
+         <children>
+             <Button fx:id="btn" layoutX="14.0" layoutY="98.0" mnemonicParsing="false" onAction="#btnAction" prefHeight="26.0" prefWidth="159.0" style="-fx-background-radius: 64px;" text="Wybierz pliki">
+               <font>
+                  <Font name="Lato Light" size="16.0" />
+               </font></Button>
+             <Button fx:id="deleteBtn" layoutX="14.0" layoutY="167.0" mnemonicParsing="false" onAction="#delete" prefHeight="50.0" prefWidth="168.0" style="-fx-background-radius: 16px;" text="Usuń wybrane pliki" textFill="RED">
+               <font>
+                  <Font name="Lato Light" size="15.0" />
+               </font></Button>
+             <Button fx:id="deleteAll" layoutX="14.0" layoutY="200.0" mnemonicParsing="false" onAction="#deleteAll" prefHeight="50.0" prefWidth="168.0" style="-fx-background-radius: 16px;" text="Usuń wszystkie pliki" textFill="RED">
+               <font>
+                  <Font name="Lato Light" size="15.0" />
+               </font></Button>
+             <Button fx:id="importt" layoutX="14.0" layoutY="417.0" mnemonicParsing="false" onAction="#importing" prefHeight="50.0" prefWidth="168.0" style="-fx-border-color: #68c999; -fx-background-radius: 16px; -fx-border-width: 0; -fx-border-radius: 16px;" text="Importuj" textFill="#3676ff">
+               <font>
+                  <Font name="Lato Light" size="18.0" />
+               </font></Button>
+             <Button fx:id="showCity" layoutX="104.0" layoutY="417.0" mnemonicParsing="false" onAction="#showCities" prefHeight="48.0" prefWidth="165.0" style="-fx-border-color: #68c999; -fx-background-radius: 16px; -fx-border-width: 0; -fx-border-radius: 16px;" text="Pokaż miasta" textFill="#0056ff">
+               <font>
+                  <Font name="Lato Light" size="18.0" />
+               </font></Button>
+         </children></VBox>
+
+   </right>
+   <bottom>
+      <AnchorPane prefHeight="95.0" prefWidth="879.0" style="-fx-background-color: #71bca0;" BorderPane.alignment="CENTER">
+         <children>
+             <Label fx:id="label" text="" textFill="WHITE">
+               <font>
+                  <Font name="Lato Light" size="18.0" />
+               </font></Label>
+         </children></AnchorPane>
+   </bottom>
+   <center>
+       <ListView fx:id="citiesList" layoutX="223.0" layoutY="68.0" prefHeight="464.0" prefWidth="329.0" style=" -fx-border-color: #71bca0; -fx-border-width: 2px; -fx-background-radius: 4px; -fx-border-radius: 4px;" BorderPane.alignment="CENTER" />
+   </center>
+   <left>
+       <ListView fx:id="list" layoutX="441.0" layoutY="68.0" prefHeight="381.0" prefWidth="365.0" style=" -fx-border-width: 2px; -fx-border-color: #71bca0; -fx-background-radius: 4px; -fx-border-radius: 4px;" BorderPane.alignment="CENTER" />
+   </left>
+</BorderPane>
